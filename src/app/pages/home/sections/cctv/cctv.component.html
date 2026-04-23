@@ -3,31 +3,62 @@
     <div class="cctv-top">
       <div>
         <span class="section-label">Seguridad Electrónica</span>
-        <h2 class="section-title">Cámaras <em>CCTV</em> e instalación<br>profesional de vigilancia</h2>
+        <h2 class="section-title">Catálogo <em>CCTV</em> tipo kit con líneas<br>reales de Dahua y Hikvision</h2>
       </div>
       <p class="section-desc">
-        Provisión e instalación de sistemas de videovigilancia para empresas,
-        edificios y comercios. Tecnología IP, HD y análisis con inteligencia artificial.
+        Seleccionamos kits y configuraciones referenciales con imágenes oficiales
+        para mostrar opciones reales de NVR, cámaras bullet, Wi-Fi e instalación profesional.
       </p>
     </div>
 
-    <div class="products-row">
-      <div class="product-card" *ngFor="let p of products" [class.featured]="p.highlight">
-        <div class="pc-tag" [class.tag-red]="p.highlight">{{ p.tag }}</div>
-        <div class="pc-icon-wrap">
-          <app-icon [name]="p.icon" [size]="32"></app-icon>
+    <div class="brand-strip">
+      <span class="brand-chip brand-chip-static">Selección oficial</span>
+      <span class="brand-chip">Dahua</span>
+      <span class="brand-chip">Hikvision</span>
+      <span class="brand-chip">PoE</span>
+      <span class="brand-chip">Wi-Fi</span>
+      <span class="brand-chip">Interior y exterior</span>
+    </div>
+
+    <div class="kit-grid">
+      <article class="kit-card" *ngFor="let kit of kits" [class.featured]="kit.featured">
+        <div class="kit-media" [class.stacked]="kit.images.length > 1">
+          <img class="kit-image main-image" [src]="kit.images[0]" [alt]="kit.title">
+          <img
+            *ngIf="kit.images[1]"
+            class="kit-image side-image"
+            [src]="kit.images[1]"
+            [alt]="kit.series + ' componente'">
         </div>
-        <h3>{{ p.name }}</h3>
-        <ul class="pc-features">
-          <li *ngFor="let f of p.features">
-            <i class="fa-solid fa-minus"></i>{{ f }}
-          </li>
-        </ul>
-      </div>
+
+        <div class="kit-body">
+          <div class="kit-topline">
+            <span class="kit-badge">{{ kit.badge }}</span>
+            <span class="kit-brand">{{ kit.brand }}</span>
+          </div>
+
+          <div class="kit-series">{{ kit.series }}</div>
+          <h3>{{ kit.title }}</h3>
+          <p class="kit-summary">{{ kit.summary }}</p>
+          <div class="kit-audience">{{ kit.audience }}</div>
+
+          <ul class="kit-includes">
+            <li *ngFor="let item of kit.includes">
+              <i class="fa-solid fa-check"></i>
+              <span>{{ item }}</span>
+            </li>
+          </ul>
+
+          <div class="kit-footer">
+            <span class="kit-note">{{ kit.note }}</span>
+            <a [href]="kit.sourceUrl" target="_blank" rel="noreferrer noopener">Ver fuente oficial</a>
+          </div>
+        </div>
+      </article>
     </div>
 
     <div class="solutions-grid">
-      <div class="sol-card" *ngFor="let s of solutions">
+      <div class="sol-card" *ngFor="let s of services">
         <div class="sol-icon-wrap">
           <app-icon [name]="s.icon" [size]="24"></app-icon>
         </div>
@@ -35,5 +66,10 @@
         <p>{{ s.desc }}</p>
       </div>
     </div>
+
+    <p class="catalog-note">
+      Imágenes oficiales tomadas de líneas y kits publicados por Dahua y Hikvision.
+      La disponibilidad final puede variar según modelo, stock e integración definida en obra.
+    </p>
   </div>
 </section>
