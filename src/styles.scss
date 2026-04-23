@@ -35,8 +35,11 @@
     0 0 0 1px rgba(211,47,47,.25),
     0 4px 20px rgba(0,0,0,.5);
   --logo-shadow-hover:
-    0 0 0 2px rgba(211,47,47,.5),
-    0 6px 24px rgba(0,0,0,.6);
+    0 0 0 1px rgba(239,83,80,.34),
+    0 10px 26px rgba(0,0,0,.56);
+  --logo-filter: saturate(.92) contrast(1.01) brightness(.99);
+  --logo-border: rgba(255,255,255,.08);
+  --logo-surface: rgba(255,255,255,.025);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -83,8 +86,11 @@ body.light-theme {
     0 0 0 1px rgba(211,47,47,.18),
     0 10px 24px rgba(15,23,42,.10);
   --logo-shadow-hover:
-    0 0 0 2px rgba(211,47,47,.35),
-    0 12px 28px rgba(15,23,42,.14);
+    0 0 0 1px rgba(211,47,47,.22),
+    0 14px 30px rgba(15,23,42,.13);
+  --logo-filter: saturate(.9) contrast(1.02) brightness(.985);
+  --logo-border: rgba(15,23,42,.08);
+  --logo-surface: rgba(255,255,255,.82);
   color-scheme: light;
 }
 
@@ -201,3 +207,4 @@ p.section-desc {
 body.light-theme .deco-number {
   color: rgba(15,23,42,0.035);
 }
+

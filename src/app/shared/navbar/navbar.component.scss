@@ -33,14 +33,19 @@
   flex-shrink: 0;
 
   .logo-img {
-    height: 46px;
+    height: 28px;
     width: auto;
-    border-radius: 8px;
+    border-radius: 9px;
+    padding: 3px 5px;
+    border: 1px solid var(--logo-border);
+    background: var(--logo-surface);
     box-shadow: var(--logo-shadow);
-    transition: box-shadow .25s, transform .2s;
+    filter: var(--logo-filter);
+    transition: box-shadow .25s, transform .2s, filter .2s;
 
     &:hover {
       box-shadow: var(--logo-shadow-hover);
+      filter: saturate(.98) contrast(1.02) brightness(1);
       transform: translateY(-1px);
     }
   }

@@ -27,12 +27,20 @@
     margin-bottom: 18px;
 
     .footer-logo-img {
-      height: 52px;
+      height: 30px;
       width: auto;
-      border-radius: 8px;
-      box-shadow:
-        0 0 0 1px rgba(211,47,47,.2),
-        var(--shadow-soft);
+      border-radius: 9px;
+      padding: 3px 5px;
+      border: 1px solid var(--logo-border);
+      background: var(--logo-surface);
+      box-shadow: var(--logo-shadow);
+      filter: var(--logo-filter);
+      transition: box-shadow .25s, filter .2s;
+
+      &:hover {
+        box-shadow: var(--logo-shadow-hover);
+        filter: saturate(.98) contrast(1.02) brightness(1);
+      }
     }
   }
 
