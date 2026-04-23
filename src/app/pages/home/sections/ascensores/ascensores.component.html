@@ -1,0 +1,51 @@
+<section id="ascensores" class="asc-section">
+  <div class="deco-bg"></div>
+  <div class="container">
+    <div class="asc-header">
+      <span class="section-label">Transporte Vertical</span>
+      <h2 class="section-title">Ascensores y <em>automatización</em><br>para cada edificio</h2>
+      <p class="section-desc">
+        Venta, instalación y mantenimiento con tecnología actual.
+        Proyectos adaptados a cada estructura.
+      </p>
+    </div>
+
+    <div class="asc-grid">
+      <div class="asc-visual">
+        <div class="shaft-wrap">
+          <div class="shaft-arrows">
+            <i class="fa-solid fa-chevron-up"></i>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="shaft">
+            <div class="floor active">
+              <span class="fn">3</span>
+              <div class="cabin-icon">
+                <app-icon name="ascensores" [size]="20"></app-icon>
+              </div>
+            </div>
+            <div class="floor"><span class="fn">2</span></div>
+            <div class="floor"><span class="fn">PB</span></div>
+          </div>
+        </div>
+        <div class="asc-stat">
+          <strong>+50</strong>
+          <span>Unidades instaladas</span>
+        </div>
+      </div>
+
+      <div class="features-list">
+        <div class="feature-item" *ngFor="let f of features">
+          <div class="fi-icon">
+            <app-icon [name]="f.icon" [size]="20"></app-icon>
+          </div>
+          <div class="fi-body">
+            <span class="fi-num">{{ f.num }}</span>
+            <h4>{{ f.title }}</h4>
+            <p>{{ f.desc }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

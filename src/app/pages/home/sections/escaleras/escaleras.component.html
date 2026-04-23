@@ -1,0 +1,42 @@
+<section id="escaleras" class="esc-section">
+  <div class="container">
+    <div class="esc-grid">
+      <div class="esc-left">
+        <span class="section-label">Escaleras Mecánicas</span>
+        <h2 class="section-title">Movilidad continua<br>con <em>máxima seguridad</em></h2>
+        <p class="section-desc">
+          Provisión, instalación y mantenimiento de escaleras mecánicas para
+          centros comerciales, estaciones y edificios de alto flujo peatonal.
+        </p>
+        <div class="benefits">
+          <div class="benefit" *ngFor="let b of benefits">
+            <div class="b-icon">
+              <app-icon [name]="b.icon" [size]="18"></app-icon>
+            </div>
+            <span>{{ b.text }}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="esc-right">
+        <div class="esc-card">
+          <div class="esc-illustration">
+            <app-icon name="escaleras" [size]="96"></app-icon>
+          </div>
+          <span class="esc-card-label">Escalera Mecánica</span>
+        </div>
+
+        <div class="specs-table">
+          <div class="st-header">
+            <i class="fa-solid fa-table-list"></i>
+            Especificaciones Técnicas
+          </div>
+          <div class="spec-row" *ngFor="let s of specs">
+            <span>{{ s.label }}</span>
+            <strong>{{ s.value }}</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,74 @@
+<svg [attr.width]="size" [attr.height]="size" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <ng-container [ngSwitch]="name">
+    <ng-container *ngSwitchCase=""electricidad"">
+      <rect x="8" y="6" width="32" height="36" rx="3" stroke="currentColor" stroke-width="2"/>
+      <line x1="14" y1="14" x2="34" y2="14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <line x1="14" y1="20" x2="34" y2="20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <line x1="14" y1="26" x2="24" y2="26" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M28 28L25 34H29L27 40L35 32H30L32 28H28Z" fill="currentColor"/>
+    </ng-container>
+    <ng-container *ngSwitchCase=""tablero"">
+      <rect x="6" y="4" width="36" height="40" rx="3" stroke="currentColor" stroke-width="2"/>
+      <rect x="11" y="10" width="10" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+      <rect x="27" y="10" width="10" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+      <circle cx="16" cy="24" r="3" stroke="currentColor" stroke-width="1.5"/>
+      <circle cx="32" cy="24" r="3" stroke="currentColor" stroke-width="1.5"/>
+      <line x1="11" y1="31" x2="37" y2="31" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    </ng-container>
+    <ng-container *ngSwitchCase=""tierra"">
+      <line x1="24" y1="6" x2="24" y2="26" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="12" y1="30" x2="36" y2="30" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="16" y1="35" x2="32" y2="35" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="20" y1="40" x2="28" y2="40" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+    </ng-container>
+    <ng-container *ngSwitchCase=""mantenimiento"">
+      <path d="M36 10L38 8L40 10L38 12Z" fill="currentColor"/>
+      <path d="M36 10L26 20L10 36C9 37 9 39 10 40C11 41 13 41 14 40L30 24L36 10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </ng-container>
+    <ng-container *ngSwitchCase=""proyecto"">
+      <rect x="6" y="8" width="36" height="32" rx="2" stroke="currentColor" stroke-width="2"/>
+      <line x1="6" y1="14" x2="42" y2="14" stroke="currentColor" stroke-width="1.5"/>
+      <circle cx="10" cy="11" r="1.5" fill="currentColor"/>
+      <path d="M14 24L20 30L34 20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </ng-container>
+    <ng-container *ngSwitchCase=""ascensores"">
+      <rect x="14" y="4" width="20" height="36" rx="3" stroke="currentColor" stroke-width="2"/>
+      <rect x="18" y="10" width="12" height="18" rx="2" stroke="currentColor" stroke-width="1.5"/>
+      <path d="M20 16L24 12L28 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M20 22L24 26L28 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </ng-container>
+    <ng-container *ngSwitchCase=""escaleras"">
+      <path d="M8 40H18V32H28V24H38V14" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1="8" y1="40" x2="40" y2="8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="2 2"/>
+    </ng-container>
+    <ng-container *ngSwitchCase=""cctv"">
+      <path d="M8 18H28L36 14V34L28 30H8V18Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <circle cx="18" cy="24" r="4" stroke="currentColor" stroke-width="1.5"/>
+      <path d="M36 20L42 18V30L36 28" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="28" y1="40" x2="28" y2="30" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <line x1="22" y1="40" x2="34" y2="40" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </ng-container>
+    <ng-container *ngSwitchCase=""remoto"">
+      <rect x="8" y="10" width="32" height="22" rx="3" stroke="currentColor" stroke-width="2"/>
+      <line x1="24" y1="32" x2="24" y2="40" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <line x1="16" y1="40" x2="32" y2="40" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <circle cx="24" cy="21" r="5" stroke="currentColor" stroke-width="1.5"/>
+    </ng-container>
+    <ng-container *ngSwitchCase=""grabacion"">
+      <rect x="6" y="10" width="36" height="28" rx="3" stroke="currentColor" stroke-width="2"/>
+      <rect x="12" y="16" width="24" height="16" rx="2" stroke="currentColor" stroke-width="1.5"/>
+      <circle cx="24" cy="24" r="4" fill="currentColor" opacity="0.3"/>
+      <circle cx="24" cy="24" r="2" fill="currentColor"/>
+    </ng-container>
+    <ng-container *ngSwitchCase=""ia"">
+      <circle cx="24" cy="24" r="10" stroke="currentColor" stroke-width="2"/>
+      <path d="M24 14V10M24 38V34M14 24H10M38 24H34" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      <circle cx="24" cy="24" r="4" stroke="currentColor" stroke-width="1.5"/>
+    </ng-container>
+    <ng-container *ngSwitchCase=""cableado"">
+      <path d="M10 14C10 14 14 10 18 14C22 18 26 10 30 14C34 18 38 14 38 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M10 24C10 24 14 20 18 24C22 28 26 20 30 24C34 28 38 24 38 24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </ng-container>
+    <ng-container *ngSwitchDefault><circle cx="24" cy="24" r="16" stroke="currentColor" stroke-width="2"/></ng-container>
+  </ng-container>
+</svg>

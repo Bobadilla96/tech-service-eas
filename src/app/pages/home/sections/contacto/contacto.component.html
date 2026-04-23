@@ -1,0 +1,101 @@
+<section id="contacto" class="contact-section">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <span class="section-label">Contacto</span>
+        <h2 class="section-title">
+          Hablemos de<br>
+          tu <em>próximo proyecto</em>
+        </h2>
+        <p class="section-desc">
+          Respondemos en menos de 24 horas.
+          Visitas técnicas y cotizaciones sin costo.
+        </p>
+
+        <div class="info-items">
+          <a class="info-item" href="tel:+595974965361">
+            <div class="ii-icon"><i class="fa-brands fa-whatsapp"></i></div>
+            <div>
+              <strong>WhatsApp / Llamada</strong>
+              <span>+595 974 965 361</span>
+            </div>
+          </a>
+          <a class="info-item" href="tel:+595982368944">
+            <div class="ii-icon"><i class="fa-solid fa-phone"></i></div>
+            <div>
+              <strong>Teléfono alternativo</strong>
+              <span>+595 982 368 944</span>
+            </div>
+          </a>
+          <a class="info-item" href="mailto:techservice016@gmail.com">
+            <div class="ii-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div>
+              <strong>Email</strong>
+              <span>techservice016&#64;gmail.com</span>
+            </div>
+          </a>
+          <div class="info-item">
+            <div class="ii-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div>
+              <strong>Ubicación</strong>
+              <span>Ciudad del Este, Paraguay</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form-wrap">
+        <form class="contact-form" *ngIf="!submitted" (ngSubmit)="submit()">
+          <h3>Solicitar Cotización</h3>
+
+          <div class="form-row">
+            <div class="field">
+              <label>Nombre completo</label>
+              <input type="text" [(ngModel)]="form.nombre" name="nombre"
+                     placeholder="Su nombre" required>
+            </div>
+            <div class="field">
+              <label>Empresa</label>
+              <input type="text" [(ngModel)]="form.empresa" name="empresa"
+                     placeholder="Nombre de empresa">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label>Teléfono</label>
+              <input type="tel" [(ngModel)]="form.telefono" name="telefono"
+                     placeholder="+595...">
+            </div>
+            <div class="field">
+              <label>Servicio de interés</label>
+              <select [(ngModel)]="form.servicio" name="servicio">
+                <option value="" disabled>Seleccionar...</option>
+                <option *ngFor="let s of servicios" [value]="s">{{ s }}</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Descripción del proyecto</label>
+            <textarea [(ngModel)]="form.mensaje" name="mensaje"
+                      placeholder="Cuéntenos sobre su proyecto o instalación..."
+                      rows="4"></textarea>
+          </div>
+
+          <button type="submit" class="btn-red submit-btn">
+            Enviar Solicitud &nbsp;<i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </form>
+
+        <div class="success-msg" *ngIf="submitted">
+          <div class="success-icon">
+            <i class="fa-solid fa-check"></i>
+          </div>
+          <h3>¡Solicitud enviada!</h3>
+          <p>Nos pondremos en contacto en menos de 24 horas.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

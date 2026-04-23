@@ -1,0 +1,39 @@
+<section id="cctv" class="cctv-section">
+  <div class="container">
+    <div class="cctv-top">
+      <div>
+        <span class="section-label">Seguridad Electrónica</span>
+        <h2 class="section-title">Cámaras <em>CCTV</em> e instalación<br>profesional de vigilancia</h2>
+      </div>
+      <p class="section-desc">
+        Provisión e instalación de sistemas de videovigilancia para empresas,
+        edificios y comercios. Tecnología IP, HD y análisis con inteligencia artificial.
+      </p>
+    </div>
+
+    <div class="products-row">
+      <div class="product-card" *ngFor="let p of products" [class.featured]="p.highlight">
+        <div class="pc-tag" [class.tag-red]="p.highlight">{{ p.tag }}</div>
+        <div class="pc-icon-wrap">
+          <app-icon [name]="p.icon" [size]="32"></app-icon>
+        </div>
+        <h3>{{ p.name }}</h3>
+        <ul class="pc-features">
+          <li *ngFor="let f of p.features">
+            <i class="fa-solid fa-minus"></i>{{ f }}
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="solutions-grid">
+      <div class="sol-card" *ngFor="let s of solutions">
+        <div class="sol-icon-wrap">
+          <app-icon [name]="s.icon" [size]="24"></app-icon>
+        </div>
+        <h4>{{ s.title }}</h4>
+        <p>{{ s.desc }}</p>
+      </div>
+    </div>
+  </div>
+</section>

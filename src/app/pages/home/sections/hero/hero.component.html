@@ -1,0 +1,80 @@
+<section id="inicio" class="hero">
+  <div class="hero-noise"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+
+  <div class="container">
+    <div class="hero-layout">
+
+      <!-- Columna izquierda: texto -->
+      <div class="hero-left">
+        <div class="hero-eyebrow">
+          <span class="live-dot"></span>
+          Ciudad del Este, Paraguay
+        </div>
+
+        <h1>
+          Instalaciones<br>
+          técnicas que<br>
+          <span class="accent">funcionan.</span>
+        </h1>
+
+        <p>
+          Electricidad, ascensores, escaleras mecánicas y
+          videovigilancia CCTV. Soluciones de ingeniería
+          para empresas que no pueden permitirse fallas.
+        </p>
+
+        <div class="hero-ctas">
+          <button class="btn-red" (click)="scrollTo('#contacto')">
+            Solicitar cotización
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+          <button class="btn-ghost" (click)="scrollTo('#electricidad')">
+            Ver servicios
+          </button>
+        </div>
+
+        <div class="hero-metrics">
+          <div class="metric">
+            <strong>+200</strong>
+            <span>Proyectos ejecutados</span>
+          </div>
+          <div class="metric-sep"></div>
+          <div class="metric">
+            <strong>+10</strong>
+            <span>Años de experiencia</span>
+          </div>
+          <div class="metric-sep"></div>
+          <div class="metric">
+            <strong>24/7</strong>
+            <span>Soporte técnico</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Columna derecha: identidad visual -->
+      <div class="hero-right">
+        <div class="brand-panel">
+          <div class="brand-lines">
+            <div class="bl bl-1"></div>
+            <div class="bl bl-2"></div>
+            <div class="bl bl-3"></div>
+          </div>
+          <img src="assets/logo.png" alt="Tech Service E.A.S" class="brand-logo">
+          <div class="brand-services">
+            <div class="bs-item" *ngFor="let s of services">
+              <i class="fa-solid {{ s.icon }}"></i>
+              <span>{{ s.label }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+  </div>
+</section>

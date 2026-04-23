@@ -1,0 +1,18 @@
+<header class="navbar" [class.scrolled]="scrolled">
+  <div class="nav-inner">
+    <a class="logo" (click)="scrollTo('#inicio')">
+      <img src="assets/logo.png" alt="Tech Service E.A.S" class="logo-img">
+    </a>
+
+    <div class="nav-sep"></div>
+
+    <nav class="nav-links" [class.open]="menuOpen">
+      <a *ngFor="let link of navLinks" (click)="scrollTo(link.href)">{{ link.label }}</a>
+      <a class="nav-cta" (click)="scrollTo('#contacto')">Cotizar</a>
+    </nav>
+
+    <button class="hamburger" (click)="toggleMenu()" [class.active]="menuOpen" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>

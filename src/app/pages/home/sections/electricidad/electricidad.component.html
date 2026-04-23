@@ -1,0 +1,45 @@
+<section id="electricidad" class="elec-section">
+  <div class="top-line"></div>
+  <div class="container">
+    <div class="elec-layout">
+      <div class="elec-left">
+        <span class="section-label">Electricidad</span>
+        <h2 class="section-title">
+          Instalaciones eléctricas<br>
+          con <em>respaldo técnico</em>
+        </h2>
+        <p class="section-desc">
+          Ejecutamos proyectos eléctricos en baja y media tensión,
+          aplicando normativa vigente y estándares de seguridad.
+          Desde tableros hasta canalizaciones completas.
+        </p>
+        <div class="checks">
+          <div class="check-item">
+            <i class="fa-solid fa-check"></i>
+            Certificación técnica
+          </div>
+          <div class="check-item">
+            <i class="fa-solid fa-check"></i>
+            Materiales de primera línea
+          </div>
+          <div class="check-item">
+            <i class="fa-solid fa-check"></i>
+            Cumplimiento normativo IEC/NEC
+          </div>
+        </div>
+      </div>
+
+      <div class="elec-right">
+        <div class="services-grid">
+          <div class="service-card" *ngFor="let s of services">
+            <div class="sc-icon">
+              <app-icon [name]="s.icon" [size]="24"></app-icon>
+            </div>
+            <h4>{{ s.title }}</h4>
+            <p>{{ s.desc }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
