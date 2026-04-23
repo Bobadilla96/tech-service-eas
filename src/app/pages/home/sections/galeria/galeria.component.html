@@ -1,0 +1,58 @@
+﻿<section id="galeria" class="gallery-section">
+  <div class="container">
+    <div class="gallery-top">
+      <div class="gallery-copy">
+        <span class="section-label">Galería técnica</span>
+        <h2 class="section-title">
+          Imágenes reales de <em>tableros, obras y equipos</em>
+          ya integradas al sitio
+        </h2>
+        <p class="section-desc">
+          Esta biblioteca visual se publica ahora dentro de GitHub Pages y muestra
+          trabajos de campo, tableros eléctricos, componentes y material comercial
+          organizados por categoría.
+        </p>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card" *ngFor="let stat of stats">
+          <strong>{{ stat.value }}</strong>
+          <span>{{ stat.label }}</span>
+        </div>
+      </div>
+    </div>
+
+    <article class="category-block" *ngFor="let category of categories">
+      <div class="category-head">
+        <div>
+          <span class="category-eyebrow">{{ category.eyebrow }}</span>
+          <h3>{{ category.title }}</h3>
+          <p>{{ category.description }}</p>
+        </div>
+      </div>
+
+      <div class="gallery-strip">
+        <figure class="gallery-card" *ngFor="let item of category.items">
+          <img [src]="item.src" [alt]="item.alt" loading="lazy" decoding="async">
+          <figcaption>{{ item.label }}</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <div class="video-block">
+      <div class="video-copy-card">
+        <span class="category-eyebrow">Video</span>
+        <h3>Registro audiovisual de obra e instalación</h3>
+        <p>
+          El material multimedia también quedó expuesto en la web. El video acompaña
+          la galería fotográfica y muestra parte del trabajo técnico en campo.
+        </p>
+      </div>
+
+      <video class="showreel-player" controls preload="metadata" [poster]="video.poster">
+        <source [src]="video.src" type="video/mp4">
+        Tu navegador no soporta la reproducción de video.
+      </video>
+    </div>
+  </div>
+</section>

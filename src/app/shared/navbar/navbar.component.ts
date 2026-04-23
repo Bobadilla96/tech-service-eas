@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+﻿import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -16,6 +16,7 @@ export class NavbarComponent {
     { label: 'Inicio', href: '#inicio' },
     { label: 'Electricidad', href: '#electricidad' },
     { label: 'Ascensores', href: '#ascensores' },
+    { label: 'Galería', href: '#galeria' },
     { label: 'Escaleras', href: '#escaleras' },
     { label: 'CCTV', href: '#cctv' },
     { label: 'Contacto', href: '#contacto' },
