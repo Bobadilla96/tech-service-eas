@@ -11,8 +11,6 @@ interface CctvKit {
   audience: string;
   images: string[];
   includes: string[];
-  note: string;
-  sourceUrl: string;
   featured?: boolean;
 }
 
@@ -39,8 +37,6 @@ export class CctvComponent {
         '5 cables de red y cable HDMI',
         'Gestión remota con Hik-Connect'
       ],
-      note: 'Kit oficial Hikvision PoE.',
-      sourceUrl: 'https://www.hikvision.com/es-la/products/IP-Products/KIT/PoE-KIT/nk42e0h/',
       featured: true
     },
     {
@@ -56,9 +52,7 @@ export class CctvComponent {
         'NVS con hotspot y doble antena',
         'Hasta 2 ranuras microSD de 512 GB cada una',
         'Luz inteligente y audio bidireccional'
-      ],
-      note: 'Kit oficial Hikvision vigente.',
-      sourceUrl: 'https://www.hikvision.com/en/products/IP-Products/KIT/Wi-Fi-KIT/nks422wbh/'
+      ]
     },
     {
       brand: 'Dahua',
@@ -74,8 +68,6 @@ export class CctvComponent {
         'Cascada automática para ampliar cobertura',
         'Cámaras Wi-Fi Hero Series según ambiente'
       ],
-      note: 'Armado referencial con productos oficiales Dahua.',
-      sourceUrl: 'https://www.dahuasecurity.com/la/products/All-Products/Network-Recorders/Lite-Series/WIFI-NVR-Series/NVR1108HS-W-S2',
       featured: true
     },
     {
@@ -91,9 +83,7 @@ export class CctvComponent {
         'Cámara compacta Cube Series',
         'Operación Wi-Fi para montaje flexible',
         'Control visual de zonas internas'
-      ],
-      note: 'Configuración basada en Wireless Series Dahua.',
-      sourceUrl: 'https://www.dahuasecurity.com/la/Products/All-Products/Network-Cameras/Wireless-Series'
+      ]
     },
     {
       brand: 'Dahua',
@@ -108,9 +98,22 @@ export class CctvComponent {
         'Cobertura 360 grados sin ángulos muertos',
         'Alarmas instantáneas y patrullas periódicas',
         'Grabación central con NVR Wi-Fi'
-      ],
-      note: 'Armado referencial con líneas oficiales Dahua.',
-      sourceUrl: 'https://www.dahuasecurity.com/la/Products/All-Products/Network-Cameras/Wireless-Series/Outdoor-Camera/Picoo-Series'
+      ]
+    },
+    {
+      brand: 'Dahua',
+      badge: 'Mostrador',
+      series: 'Cube Series + NVR1108HS-W-S2',
+      title: 'Kit compacto para caja, recepción y punto de cobro',
+      summary: 'Configuración de formato reducido para vigilancia frontal en mostradores, con cámara Cube y grabación central sobre NVR inalámbrico.',
+      audience: 'Ideal para: caja, mostrador y atención rápida',
+      images: ['assets/cctv-catalog/dahua-cube-series.png', 'assets/cctv-catalog/dahua-nvr-wireless.png'],
+      includes: [
+        'Cámara Cube Series de formato compacto',
+        'Grabador NVR1108HS-W-S2 de 8 canales',
+        'Montaje discreto sobre escritorio o repisa',
+        'Grabación central y acceso móvil'
+      ]
     }
   ];
 
