@@ -44,58 +44,37 @@
         </div>
       </div>
 
-      <div class="contact-form-wrap">
-        <form class="contact-form" *ngIf="!submitted" (ngSubmit)="submit()">
-          <h3>Solicitar Cotización</h3>
+      <aside class="contact-panel">
+        <span class="contact-panel-label">Atención directa</span>
+        <h3>Coordiná tu consulta por el canal que te resulte más cómodo</h3>
+        <p>
+          Para presupuestos, visitas técnicas y coordinación de trabajos,
+          contactanos directamente por WhatsApp, llamada o correo electrónico.
+        </p>
 
-          <div class="form-row">
-            <div class="field">
-              <label>Nombre completo</label>
-              <input type="text" [(ngModel)]="form.nombre" name="nombre"
-                     placeholder="Su nombre" required>
-            </div>
-            <div class="field">
-              <label>Empresa</label>
-              <input type="text" [(ngModel)]="form.empresa" name="empresa"
-                     placeholder="Nombre de empresa">
-            </div>
-          </div>
-
-          <div class="form-row">
-            <div class="field">
-              <label>Teléfono</label>
-              <input type="tel" [(ngModel)]="form.telefono" name="telefono"
-                     placeholder="+595...">
-            </div>
-            <div class="field">
-              <label>Servicio de interés</label>
-              <select [(ngModel)]="form.servicio" name="servicio">
-                <option value="" disabled>Seleccionar...</option>
-                <option *ngFor="let s of servicios" [value]="s">{{ s }}</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="field">
-            <label>Descripción del proyecto</label>
-            <textarea [(ngModel)]="form.mensaje" name="mensaje"
-                      placeholder="Cuéntenos sobre su proyecto o instalación..."
-                      rows="4"></textarea>
-          </div>
-
-          <button type="submit" class="btn-red submit-btn">
-            Enviar Solicitud &nbsp;<i class="fa-solid fa-paper-plane"></i>
-          </button>
-        </form>
-
-        <div class="success-msg" *ngIf="submitted">
-          <div class="success-icon">
-            <i class="fa-solid fa-check"></i>
-          </div>
-          <h3>¡Solicitud enviada!</h3>
-          <p>Nos pondremos en contacto en menos de 24 horas.</p>
+        <div class="contact-actions">
+          <a class="contact-action contact-action-primary" href="https://wa.me/595974965361" target="_blank" rel="noreferrer">
+            <i class="fa-brands fa-whatsapp"></i>
+            Escribir por WhatsApp
+          </a>
+          <a class="contact-action" href="tel:+595974965361">
+            <i class="fa-solid fa-phone"></i>
+            Llamar ahora
+          </a>
+          <a class="contact-action" href="mailto:techservice016@gmail.com">
+            <i class="fa-solid fa-envelope"></i>
+            Enviar correo
+          </a>
         </div>
-      </div>
+
+        <div class="contact-note">
+          <strong>Respuesta rápida</strong>
+          <p>
+            Atendemos consultas para instalaciones eléctricas, ascensores,
+            escaleras mecánicas, mantenimiento y soporte técnico.
+          </p>
+        </div>
+      </aside>
     </div>
   </div>
 </section>

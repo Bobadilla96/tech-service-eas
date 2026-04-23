@@ -1,4 +1,4 @@
-.hero {
+﻿.hero {
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -7,34 +7,41 @@
   padding-top: 70px;
 }
 
-/* Texturas y luces de fondo */
 .hero-noise {
-  position: absolute; inset: 0; z-index: 0;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
   background-size: 200px;
 }
 
 .hero-grid {
-  position: absolute; inset: 0; z-index: 0;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
   background-image:
-    linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+    linear-gradient(var(--hero-grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--hero-grid-line) 1px, transparent 1px);
   background-size: 48px 48px;
   mask-image: radial-gradient(ellipse 80% 70% at 50% 50%, black 40%, transparent 100%);
 }
 
 .hero-glow {
   position: absolute;
-  top: -200px; right: -200px;
-  width: 700px; height: 700px;
+  top: -200px;
+  right: -200px;
+  width: 700px;
+  height: 700px;
   background: radial-gradient(circle, rgba(211,47,47,.12) 0%, transparent 65%);
   z-index: 0;
   pointer-events: none;
 }
 
-.container { position: relative; z-index: 1; }
+.container {
+  position: relative;
+  z-index: 1;
+}
 
-/* Layout dos columnas */
 .hero-layout {
   display: grid;
   grid-template-columns: 1fr 420px;
@@ -43,9 +50,6 @@
   min-height: calc(100vh - 70px);
   padding: 60px 0;
 }
-
-/* ── IZQUIERDA ── */
-.hero-left {}
 
 .hero-eyebrow {
   display: inline-flex;
@@ -59,7 +63,8 @@
   margin-bottom: 28px;
 
   .live-dot {
-    width: 7px; height: 7px;
+    width: 7px;
+    height: 7px;
     border-radius: 50%;
     background: var(--red);
     box-shadow: 0 0 0 3px rgba(211,47,47,.2);
@@ -69,7 +74,7 @@
 
 @keyframes livePulse {
   0%,100% { box-shadow: 0 0 0 3px rgba(211,47,47,.2); }
-  50%      { box-shadow: 0 0 0 6px rgba(211,47,47,.05); }
+  50% { box-shadow: 0 0 0 6px rgba(211,47,47,.05); }
 }
 
 h1 {
@@ -128,26 +133,27 @@ p {
   }
 
   .metric-sep {
-    width: 1px; height: 40px;
+    width: 1px;
+    height: 40px;
     background: var(--border);
   }
 }
 
-/* ── DERECHA ── */
-.hero-right {}
-
 .brand-panel {
   background: var(--surface);
-  border: 1px solid rgba(255,255,255,0.07);
+  border: 1px solid var(--border);
   border-radius: 16px;
   padding: 36px;
   position: relative;
   overflow: hidden;
+  box-shadow: var(--shadow-elevated);
 
   &::before {
     content: '';
     position: absolute;
-    top: 0; left: 0; right: 0;
+    top: 0;
+    left: 0;
+    right: 0;
     height: 3px;
     background: linear-gradient(90deg, var(--dark-red), var(--red), var(--red-light));
   }
@@ -155,8 +161,10 @@ p {
 
 .brand-lines {
   position: absolute;
-  bottom: 0; right: 0;
-  width: 160px; height: 160px;
+  bottom: 0;
+  right: 0;
+  width: 160px;
+  height: 160px;
   overflow: hidden;
   opacity: 0.06;
 
@@ -165,6 +173,7 @@ p {
     background: var(--red);
     transform-origin: right bottom;
   }
+
   .bl-1 { width: 200px; height: 1px; bottom: 40px; right: 0; transform: rotate(-35deg); }
   .bl-2 { width: 160px; height: 1px; bottom: 70px; right: 0; transform: rotate(-35deg); }
   .bl-3 { width: 120px; height: 1px; bottom: 100px; right: 0; transform: rotate(-35deg); }
@@ -176,7 +185,7 @@ p {
   border-radius: 8px;
   display: block;
   margin-bottom: 28px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+  box-shadow: var(--shadow-strong);
 }
 
 .brand-services {
@@ -189,39 +198,46 @@ p {
   display: flex;
   align-items: center;
   gap: 10px;
-  background: rgba(255,255,255,.03);
+  background: var(--surface-soft);
   border: 1px solid var(--border);
   border-radius: 8px;
   padding: 10px 14px;
   font-size: 12.5px;
   color: var(--text-muted);
-  transition: border-color .2s, color .2s;
+  transition: border-color .2s, color .2s, background .2s;
 
   &:hover {
     border-color: rgba(211,47,47,.3);
     color: var(--text);
+    background: var(--surface-soft-hover);
   }
 
-  i { color: var(--red); font-size: 13px; width: 16px; text-align: center; }
+  i {
+    color: var(--red);
+    font-size: 13px;
+    width: 16px;
+    text-align: center;
+  }
 }
 
-/* Scroll hint */
 .hero-scroll {
   position: absolute;
-  bottom: 28px; left: 50%;
+  bottom: 28px;
+  left: 50%;
   transform: translateX(-50%);
   z-index: 1;
 
   .scroll-line {
-    width: 1px; height: 48px;
-    background: linear-gradient(to bottom, transparent, rgba(255,255,255,.2));
+    width: 1px;
+    height: 48px;
+    background: linear-gradient(to bottom, transparent, var(--hero-scroll-line));
     animation: scrollFade 2s ease-in-out infinite;
   }
 }
 
 @keyframes scrollFade {
-  0%   { opacity: 0; transform: scaleY(0); transform-origin: top; }
-  50%  { opacity: 1; transform: scaleY(1); }
+  0% { opacity: 0; transform: scaleY(0); transform-origin: top; }
+  50% { opacity: 1; transform: scaleY(1); }
   100% { opacity: 0; transform: scaleY(0); transform-origin: bottom; }
 }
 

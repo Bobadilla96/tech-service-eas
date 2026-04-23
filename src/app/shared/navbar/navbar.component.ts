@@ -1,4 +1,4 @@
-﻿import { Component, HostListener } from '@angular/core';
+﻿import { Component, HostListener, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -8,9 +8,10 @@ import { CommonModule } from '@angular/common';
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit {
   scrolled = false;
   menuOpen = false;
+  theme: 'dark' | 'light' = 'dark';
 
   navLinks = [
     { label: 'Inicio', href: '#inicio' },
@@ -21,6 +22,16 @@ export class NavbarComponent {
     { label: 'CCTV', href: '#cctv' },
     { label: 'Contacto', href: '#contacto' },
   ];
+
+  ngOnInit() {
+    const savedTheme = window.localStorage.getItem('tech-service-theme');
+    const systemPrefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+    this.theme = savedTheme === 'light' || savedTheme === 'dark'
+      ? savedTheme
+      : (systemPrefersLight ? 'light' : 'dark');
+
+    this.applyTheme();
+  }
 
   @HostListener('window:scroll')
   onScroll() {
@@ -35,5 +46,15 @@ export class NavbarComponent {
 
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
+  }
+
+  toggleTheme() {
+    this.theme = this.theme === 'dark' ? 'light' : 'dark';
+    window.localStorage.setItem('tech-service-theme', this.theme);
+    this.applyTheme();
+  }
+
+  private applyTheme() {
+    document.body.classList.toggle('light-theme', this.theme === 'light');
   }
 }

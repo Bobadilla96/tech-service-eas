@@ -1,9 +1,7 @@
 ﻿.gallery-section {
   position: relative;
   overflow: hidden;
-  background:
-    radial-gradient(circle at top left, rgba(211, 47, 47, 0.12), transparent 35%),
-    linear-gradient(180deg, #090910 0%, #0d0d15 30%, #10101a 100%);
+  background: var(--gallery-background);
 }
 
 .gallery-top {
@@ -24,8 +22,8 @@
 .category-block,
 .video-block {
   border: 1px solid var(--border);
-  background: rgba(255, 255, 255, 0.03);
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22);
+  background: var(--surface-soft);
+  box-shadow: var(--shadow-elevated);
 }
 
 .stat-card {
@@ -36,7 +34,7 @@
     display: block;
     font-size: 30px;
     font-weight: 800;
-    color: #fff;
+    color: var(--text);
   }
 
   span {
@@ -122,15 +120,15 @@
 .gallery-card {
   overflow: hidden;
   border-radius: 18px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background: #0a0a11;
+  border: 1px solid var(--border);
+  background: var(--gallery-card-bg);
 
   img {
     display: block;
     width: 100%;
     aspect-ratio: 4 / 5;
     object-fit: cover;
-    background: #06060a;
+    background: var(--media-surface);
   }
 
   figcaption {
@@ -172,18 +170,13 @@
   width: 100%;
   min-height: 320px;
   border-radius: 22px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background: #000;
+  border: 1px solid var(--border);
+  background: var(--media-surface);
 }
 
 @keyframes gallery-slide {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(calc(-50% - (var(--carousel-gap) / 2)));
-  }
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(-50% - (var(--carousel-gap) / 2))); }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -11,6 +11,10 @@
       <a class="nav-cta" (click)="scrollTo('#contacto')">Cotizar</a>
     </nav>
 
+    <button class="theme-toggle" type="button" (click)="toggleTheme()" [attr.aria-label]="theme === 'dark' ? 'Activar modo claro' : 'Activar modo oscuro'">
+      <i class="fa-solid" [ngClass]="theme === 'dark' ? 'fa-sun' : 'fa-moon'"></i>
+    </button>
+
     <button class="hamburger" (click)="toggleMenu()" [class.active]="menuOpen" aria-label="Menú">
       <span></span><span></span><span></span>
     </button>

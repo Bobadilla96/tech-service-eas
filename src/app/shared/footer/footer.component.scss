@@ -1,4 +1,4 @@
-.footer {
+﻿.footer {
   background: var(--darker);
   border-top: 1px solid var(--border);
   padding: 60px 0 0;
@@ -6,7 +6,11 @@
 
   &::before {
     content: '';
-    position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
     background: linear-gradient(90deg, transparent, var(--red) 30%, var(--red-light) 70%, transparent);
   }
 }
@@ -28,7 +32,7 @@
       border-radius: 8px;
       box-shadow:
         0 0 0 1px rgba(211,47,47,.2),
-        0 4px 16px rgba(0,0,0,.4);
+        var(--shadow-soft);
     }
   }
 
@@ -41,35 +45,49 @@
 
 .footer-col {
   h5 {
-    font-size: 11px; font-weight: 700;
-    color: var(--text); letter-spacing: 2px;
-    text-transform: uppercase; margin-bottom: 18px;
-    display: flex; align-items: center; gap: 8px;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 
     &::before {
       content: '';
-      width: 16px; height: 2px;
-      background: var(--red); border-radius: 1px;
+      width: 16px;
+      height: 2px;
+      background: var(--red);
+      border-radius: 1px;
     }
   }
 
   ul {
     list-style: none;
-    display: flex; flex-direction: column; gap: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 
     li {
       font-size: 13.5px;
       color: var(--text-muted);
       transition: color .2s;
       cursor: default;
-      display: flex; align-items: center; gap: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
 
       i { color: var(--text-dim); font-size: 12px; width: 14px; }
 
       a {
-        color: var(--text-muted); text-decoration: none;
+        color: var(--text-muted);
+        text-decoration: none;
         transition: color .2s;
-        display: flex; align-items: center; gap: 8px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
         i { color: var(--text-dim); }
         &:hover { color: var(--text); i { color: var(--red); } }
       }
