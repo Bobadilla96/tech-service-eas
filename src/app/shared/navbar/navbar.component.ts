@@ -16,11 +16,11 @@ export class NavbarComponent implements OnInit {
   navLinks = [
     { label: 'Inicio', href: '#inicio' },
     { label: 'Electricidad', href: '#electricidad' },
+    { label: 'Aire Acond.', href: '#aire' },
     { label: 'Ascensores', href: '#ascensores' },
-    { label: 'Galería', href: '#galeria' },
     { label: 'Escaleras', href: '#escaleras' },
     { label: 'CCTV', href: '#cctv' },
-    { label: 'Aire Acond.', href: '#aire' },
+    { label: 'Galería', href: '#galeria' },
     { label: 'Contacto', href: '#contacto' },
   ];
 
