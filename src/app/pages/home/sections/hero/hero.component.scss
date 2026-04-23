@@ -182,20 +182,19 @@ p {
 .brand-logo {
   width: min(100%, 190px);
   height: auto;
-  border-radius: 12px;
   display: block;
   margin: 0 auto 24px;
-  padding: 5px 7px;
-  border: 1px solid var(--logo-border);
-  background: var(--logo-surface);
-  box-shadow: var(--logo-shadow);
-  filter: var(--logo-filter);
-  transition: box-shadow .25s, filter .2s, transform .2s;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  filter: none;
+  transition: transform .2s ease, opacity .2s ease;
 
   &:hover {
-    box-shadow: var(--logo-shadow-hover);
-    filter: saturate(.98) contrast(1.02) brightness(1);
     transform: translateY(-1px);
+    opacity: .94;
   }
 }
 
@@ -262,3 +261,4 @@ p {
   .hero-ctas { flex-direction: column; }
   .hero-metrics { gap: 16px; }
 }
+

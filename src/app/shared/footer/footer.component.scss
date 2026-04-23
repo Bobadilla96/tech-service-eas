@@ -29,17 +29,18 @@
     .footer-logo-img {
       height: 30px;
       width: auto;
-      border-radius: 9px;
-      padding: 3px 5px;
-      border: 1px solid var(--logo-border);
-      background: var(--logo-surface);
-      box-shadow: var(--logo-shadow);
-      filter: var(--logo-filter);
-      transition: box-shadow .25s, filter .2s;
+      display: block;
+      padding: 0;
+      border: none;
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
+      filter: none;
+      transition: transform .2s ease, opacity .2s ease;
 
       &:hover {
-        box-shadow: var(--logo-shadow-hover);
-        filter: saturate(.98) contrast(1.02) brightness(1);
+        transform: translateY(-1px);
+        opacity: .92;
       }
     }
   }
