@@ -1,0 +1,83 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 175" role="img" aria-labelledby="title desc">
+  <title id="title">Tech Service E.A.S</title>
+  <desc id="desc">Logo vectorial transparente de Tech Service E.A.S Servicios Integrales.</desc>
+  <defs>
+    <linearGradient id="panel-top" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#aabac8"/>
+      <stop offset="100%" stop-color="#5d7385"/>
+    </linearGradient>
+    <linearGradient id="panel-left" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#889cac"/>
+      <stop offset="100%" stop-color="#4c6071"/>
+    </linearGradient>
+    <linearGradient id="panel-right" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#74899a"/>
+      <stop offset="100%" stop-color="#314351"/>
+    </linearGradient>
+    <linearGradient id="panel-front" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a7b7c5"/>
+      <stop offset="100%" stop-color="#5b7184"/>
+    </linearGradient>
+    <linearGradient id="red-main" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff6a64"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+    <linearGradient id="red-side" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#b71c1c"/>
+      <stop offset="100%" stop-color="#7d1111"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(14 12)" stroke-linecap="round" stroke-linejoin="round">
+    <g fill="none" stroke="#cfd9df" opacity=".72">
+      <circle cx="28" cy="63" r="24" stroke-width="2"/>
+      <circle cx="28" cy="63" r="4" stroke-width="1.4"/>
+      <path d="M28 34v58M-1 63h58" stroke-width="1.8"/>
+      <path d="M8 43l40 40M8 83l40-40" stroke-width="1.4"/>
+    </g>
+    <g fill="none" stroke="#111921" opacity=".78">
+      <path d="M74 10v112" stroke-width="2.4"/>
+      <path d="M81 14v106" stroke-width="2.2"/>
+      <path d="M88 18v100" stroke-width="1.8"/>
+      <path d="M31 41l104 8" stroke-width="1.5"/>
+      <path d="M29 56l110 2" stroke-width="1.5"/>
+      <path d="M26 72l112-5" stroke-width="1.5"/>
+      <path d="M23 88l111-14" stroke-width="1.4"/>
+      <path d="M82 38l53 6" stroke-width="1.3"/>
+      <path d="M82 55l56 0" stroke-width="1.3"/>
+      <path d="M82 72l53-7" stroke-width="1.3"/>
+      <path d="M82 89l49-14" stroke-width="1.2"/>
+    </g>
+    <g transform="translate(20 0)">
+      <path d="M25 28L62 12L95 27L58 43Z" fill="url(#panel-top)" stroke="#23313c" stroke-width="2"/>
+      <path d="M25 28L58 43V103L25 87Z" fill="url(#panel-left)" stroke="#23313c" stroke-width="2"/>
+      <path d="M58 43L95 27V86L58 103Z" fill="url(#panel-right)" stroke="#23313c" stroke-width="2"/>
+      <path d="M58 43L95 27L95 44L58 59Z" fill="url(#panel-front)" opacity=".45"/>
+      <path d="M11 47L60 26L68 34L19 55Z" fill="url(#red-main)" stroke="#8f1818" stroke-width="1.6"/>
+      <path d="M60 26L68 34V47L60 39Z" fill="url(#red-side)" stroke="#7d1111" stroke-width="1.4"/>
+      <path d="M13 66L60 47L68 55L20 74Z" fill="url(#red-main)" stroke="#8f1818" stroke-width="1.6"/>
+      <path d="M60 47L68 55V68L60 60Z" fill="url(#red-side)" stroke="#7d1111" stroke-width="1.4"/>
+      <path d="M11 86L60 67L68 75L18 95Z" fill="url(#red-main)" stroke="#8f1818" stroke-width="1.6"/>
+      <path d="M60 67L68 75V88L60 80Z" fill="url(#red-side)" stroke="#7d1111" stroke-width="1.4"/>
+      <g fill="none" stroke="#dbe4ea" opacity=".58">
+        <path d="M32 37L58 26L58 103" stroke-width="1.2"/>
+        <path d="M32 52L58 43" stroke-width="1"/>
+        <path d="M33 68L58 59" stroke-width="1"/>
+        <path d="M32 83L58 75" stroke-width="1"/>
+        <path d="M67 39L89 31" stroke-width="1"/>
+        <path d="M67 55L89 47" stroke-width="1"/>
+        <path d="M67 71L89 63" stroke-width="1"/>
+        <path d="M67 87L89 79" stroke-width="1"/>
+      </g>
+    </g>
+  </g>
+  <g font-family="Inter, 'Segoe UI', Arial, sans-serif" text-rendering="geometricPrecision">
+    <text x="140" y="71" font-size="49" font-weight="800" letter-spacing="1" fill="#33424d" stroke="#ffffff" stroke-opacity=".26" stroke-width="1.1" paint-order="stroke">
+      TECH SERVICE <tspan fill="#d32f2f" stroke="#ffe3e3" stroke-opacity=".18">E.A.S</tspan>
+    </text>
+    <text x="198" y="121" font-size="31" font-weight="400" letter-spacing=".4" fill="#4b5c68" stroke="#ffffff" stroke-opacity=".15" stroke-width=".65" paint-order="stroke">
+      Servicios Integrales
+    </text>
+  </g>
+</svg>
+
+
