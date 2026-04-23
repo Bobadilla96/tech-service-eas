@@ -11,6 +11,8 @@ interface GalleryCategory {
   eyebrow: string;
   title: string;
   description: string;
+  duration: string;
+  reverse?: boolean;
   items: GalleryItem[];
 }
 
@@ -35,6 +37,7 @@ export class GaleriaComponent {
       'Control y distribución eléctrica',
       'Gabinetes, variadores, tableros de sala de máquinas y montajes listos para operación.',
       'tableros_control',
+      '38s',
       [
         'caja_control_mural_01.jpeg',
         'detalle_componentes_tablero_01.jpeg',
@@ -56,6 +59,7 @@ export class GaleriaComponent {
       'Instalación y trabajo en campo',
       'Montaje de equipos, maniobras técnicas y seguimiento de proyectos en edificios y salas de máquinas.',
       'instalacion_obra',
+      '44s',
       [
         'conexion_tablero_banco_01.jpeg',
         'edificio_en_construccion_01.jpeg',
@@ -70,13 +74,15 @@ export class GaleriaComponent {
         'tecnico_mantenimiento_ascensor_01.jpeg',
         'tecnico_trabajo_en_hueco_01.jpeg',
         'trabajo_en_plataforma_ascensor_01.jpeg',
-      ]
+      ],
+      true
     ),
     this.createCategory(
       'Equipos',
       'Componentes y materiales técnicos',
       'Piezas de tracción, cajas de componentes y referencias usadas en mantenimiento, modernización e integración.',
       'equipos_componentes',
+      '32s',
       [
         'caja_de_componentes_01.jpeg',
         'placa_tecnica_maquina_01.jpeg',
@@ -89,6 +95,7 @@ export class GaleriaComponent {
       'Material comercial y soluciones de modernización',
       'Láminas, renders y catálogos de apoyo para propuestas técnicas, ventas y presentaciones a cliente.',
       'material_comercial',
+      '40s',
       [
         'catalogo_componentes_01.jpeg',
         'catalogo_maquinas_01.jpeg',
@@ -97,7 +104,8 @@ export class GaleriaComponent {
         'render_maquina_azul_01.jpeg',
         'render_maquina_traccion_01.jpeg',
         'render_motor_01.jpeg',
-      ]
+      ],
+      true
     ),
   ];
 
@@ -111,12 +119,16 @@ export class GaleriaComponent {
     title: string,
     description: string,
     folder: string,
-    files: string[]
+    duration: string,
+    files: string[],
+    reverse = false
   ): GalleryCategory {
     return {
       eyebrow,
       title,
       description,
+      duration,
+      reverse,
       items: files.map((file) => this.createItem(folder, file)),
     };
   }

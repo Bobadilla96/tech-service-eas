@@ -31,11 +31,25 @@
         </div>
       </div>
 
-      <div class="gallery-strip">
-        <figure class="gallery-card" *ngFor="let item of category.items">
-          <img [src]="item.src" [alt]="item.alt" loading="lazy" decoding="async">
-          <figcaption>{{ item.label }}</figcaption>
-        </figure>
+      <div
+        class="gallery-strip"
+        [class.reverse]="category.reverse"
+        [style.--gallery-duration]="category.duration">
+        <div class="gallery-track">
+          <div class="gallery-sequence">
+            <figure class="gallery-card" *ngFor="let item of category.items">
+              <img [src]="item.src" [alt]="item.alt" loading="lazy" decoding="async">
+              <figcaption>{{ item.label }}</figcaption>
+            </figure>
+          </div>
+
+          <div class="gallery-sequence" aria-hidden="true">
+            <figure class="gallery-card" *ngFor="let item of category.items">
+              <img [src]="item.src" alt="" loading="lazy" decoding="async">
+              <figcaption>{{ item.label }}</figcaption>
+            </figure>
+          </div>
+        </div>
       </div>
     </article>
 
