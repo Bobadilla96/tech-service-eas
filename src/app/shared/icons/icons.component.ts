@@ -1,8 +1,8 @@
-import { Component, Input, OnChanges } from "@angular/core";
+﻿import { Component, Input, OnChanges } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { DomSanitizer, SafeHtml } from "@angular/platform-browser";
 
-export type IconName = "electricidad" | "tablero" | "tierra" | "mantenimiento" | "proyecto" | "ascensores" | "venta" | "instalacion" | "automatizacion" | "contrato" | "escaleras" | "cctv" | "remoto" | "grabacion" | "ia" | "cableado";
+export type IconName = "electricidad" | "tablero" | "tierra" | "mantenimiento" | "proyecto" | "ascensores" | "venta" | "instalacion" | "automatizacion" | "contrato" | "escaleras" | "cctv" | "remoto" | "grabacion" | "ia" | "cableado" | "frio" | "climatizacion";
 
 const PATHS: Record<IconName, string> = {
   "electricidad": "<rect x=\"8\" y=\"6\" width=\"32\" height=\"36\" rx=\"3\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M28 28L25 34H29L27 40L35 32H30L32 28H28Z\" fill=\"currentColor\"/>",
@@ -20,7 +20,9 @@ const PATHS: Record<IconName, string> = {
   "remoto": "<rect x=\"8\" y=\"10\" width=\"32\" height=\"22\" rx=\"3\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"24\" cy=\"21\" r=\"5\" stroke=\"currentColor\" stroke-width=\"1.5\"/>",
   "grabacion": "<rect x=\"6\" y=\"10\" width=\"36\" height=\"28\" rx=\"3\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"24\" cy=\"24\" r=\"4\" fill=\"currentColor\" opacity=\"0.3\"/><circle cx=\"24\" cy=\"24\" r=\"2\" fill=\"currentColor\"/>",
   "ia": "<circle cx=\"24\" cy=\"24\" r=\"10\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"24\" cy=\"24\" r=\"4\" stroke=\"currentColor\" stroke-width=\"1.5\"/><path d=\"M17 17L20 20M31 17L28 20M17 31L20 28M28 28L31 31\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\"/>",
-  "cableado": "<path d=\"M10 14C14 10 18 14 22 18C26 10 30 14 34 18C38 14 38 14 38 14\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/><path d=\"M10 28C14 24 18 28 22 32C26 24 30 28 34 32C38 28 38 28 38 28\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/>"
+  "cableado": "<path d=\"M10 14C14 10 18 14 22 18C26 10 30 14 34 18C38 14 38 14 38 14\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/><path d=\"M10 28C14 24 18 28 22 32C26 24 30 28 34 32C38 28 38 28 38 28\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/>",
+  "frio": "<line x1=\"24\" y1=\"8\" x2=\"24\" y2=\"40\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"8\" y1=\"24\" x2=\"40\" y2=\"24\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"13\" y1=\"13\" x2=\"35\" y2=\"35\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"35\" y1=\"13\" x2=\"13\" y2=\"35\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/><circle cx=\"24\" cy=\"24\" r=\"4\" stroke=\"currentColor\" stroke-width=\"1.5\"/>",
+  "climatizacion": "<circle cx=\"24\" cy=\"20\" r=\"12\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M24 8V6M24 34V32M8 20H6M42 20H40\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/><path d=\"M24 14V20L29 23\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M12 38H36\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/>"
 };
 
 @Component({

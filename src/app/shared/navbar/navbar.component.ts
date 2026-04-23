@@ -20,6 +20,7 @@ export class NavbarComponent implements OnInit {
     { label: 'Galería', href: '#galeria' },
     { label: 'Escaleras', href: '#escaleras' },
     { label: 'CCTV', href: '#cctv' },
+    { label: 'Aire Acond.', href: '#aire' },
     { label: 'Contacto', href: '#contacto' },
   ];
 

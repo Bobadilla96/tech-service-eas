@@ -8,6 +8,7 @@ import { AscensoresComponent } from './pages/home/sections/ascensores/ascensores
 import { GaleriaComponent } from './pages/home/sections/galeria/galeria.component';
 import { EscalerasComponent } from './pages/home/sections/escaleras/escaleras.component';
 import { CctvComponent } from './pages/home/sections/cctv/cctv.component';
+import { AireComponent } from './pages/home/sections/aire/aire.component';
 import { ContactoComponent } from './pages/home/sections/contacto/contacto.component';
 
 @Component({
@@ -23,6 +24,7 @@ import { ContactoComponent } from './pages/home/sections/contacto/contacto.compo
     GaleriaComponent,
     EscalerasComponent,
     CctvComponent,
+    AireComponent,
     ContactoComponent,
   ],
   templateUrl: './app.component.html',

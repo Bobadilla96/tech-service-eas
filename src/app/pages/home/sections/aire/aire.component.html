@@ -1,0 +1,73 @@
+﻿<section id="aire" class="aire-section">
+  <div class="container">
+    <div class="aire-top">
+      <div>
+        <span class="section-label">Climatizaci&#243;n y Refrigeraci&#243;n</span>
+        <h2 class="section-title">Aire acondicionado, <em>c&#225;mara fr&#237;a</em><br>y todo tipo de climatizaci&#243;n</h2>
+      </div>
+      <p class="section-desc">
+        Instalamos y mantenemos equipos residenciales, comerciales e industriales.
+        Splits murales, cassettes, multi-splits, c&#225;maras fr&#237;as y sistemas centralizados
+        con las marcas l&#237;deres del mercado.
+      </p>
+    </div>
+
+    <div class="brand-strip">
+      <span class="brand-chip brand-chip-static">Instalaci&#243;n completa</span>
+      <span class="brand-chip">Midea</span>
+      <span class="brand-chip">Carrier</span>
+      <span class="brand-chip">Daikin</span>
+      <span class="brand-chip">Samsung</span>
+      <span class="brand-chip">C&#225;maras fr&#237;as</span>
+      <span class="brand-chip">Gas R32 / R410A</span>
+    </div>
+
+    <div class="kit-grid">
+      <article class="kit-card" *ngFor="let kit of kits" [class.featured]="kit.featured">
+        <div class="kit-media" [class.stacked]="kit.images.length > 1">
+          <img class="kit-image main-image" [src]="kit.images[0]" [alt]="kit.title">
+          <img
+            *ngIf="kit.images[1]"
+            class="kit-image side-image"
+            [src]="kit.images[1]"
+            [alt]="kit.series + ' componente'">
+        </div>
+
+        <div class="kit-body">
+          <div class="kit-topline">
+            <span class="kit-badge">{{ kit.badge }}</span>
+            <span class="kit-brand">{{ kit.brand }}</span>
+          </div>
+
+          <div class="kit-series">{{ kit.series }}</div>
+          <h3>{{ kit.title }}</h3>
+          <p class="kit-summary">{{ kit.summary }}</p>
+          <div class="kit-audience">{{ kit.audience }}</div>
+
+          <ul class="kit-includes">
+            <li *ngFor="let item of kit.includes">
+              <i class="fa-solid fa-check"></i>
+              <span>{{ item }}</span>
+            </li>
+          </ul>
+        </div>
+      </article>
+    </div>
+
+    <div class="solutions-grid">
+      <div class="sol-card" *ngFor="let s of services">
+        <div class="sol-icon-wrap">
+          <app-icon [name]="s.icon" [size]="24"></app-icon>
+        </div>
+        <h4>{{ s.title }}</h4>
+        <p>{{ s.desc }}</p>
+      </div>
+    </div>
+
+    <p class="catalog-note">
+      Im&#225;genes referenciales de equipos residenciales, comerciales e industriales.
+      La selecci&#243;n final del equipo se define seg&#250;n el espacio, uso y presupuesto
+      del cliente en visita t&#233;cnica sin costo.
+    </p>
+  </div>
+</section>
