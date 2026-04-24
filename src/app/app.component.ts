@@ -1,4 +1,4 @@
-﻿import { Component } from '@angular/core';
+﻿import { Component, ElementRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
@@ -12,7 +12,7 @@ import { AireComponent } from './pages/home/sections/aire/aire.component';
 import { ContactoComponent } from './pages/home/sections/contacto/contacto.component';
 
 @Component({
-  selector: 'app-root',
+  selector: 'x-app',
   standalone: true,
   imports: [
     CommonModule,
@@ -30,4 +30,9 @@ import { ContactoComponent } from './pages/home/sections/contacto/contacto.compo
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {}
+export class AppComponent {
+  constructor(el: ElementRef<HTMLElement>) {
+    el.nativeElement.removeAttribute('ng-version');
+    try { delete (window as any)['ng']; } catch {}
+  }
+}
