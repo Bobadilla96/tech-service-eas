@@ -1,0 +1,4 @@
+﻿User-agent: *
+Allow: /
+
+Sitemap: https://bobadilla96.github.io/tech-service-eas/sitemap.xml
