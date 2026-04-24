@@ -25,12 +25,12 @@
     <div class="kit-grid">
       <article class="kit-card" *ngFor="let kit of kits" [class.featured]="kit.featured">
         <div class="kit-media" [class.stacked]="kit.images.length > 1">
-          <img class="kit-image main-image" [src]="kit.images[0]" [alt]="kit.title">
+          <img class="kit-image main-image" [src]="kit.images[0]" [alt]="kit.title" loading="lazy" decoding="async">
           <img
             *ngIf="kit.images[1]"
             class="kit-image side-image"
             [src]="kit.images[1]"
-            [alt]="kit.series + ' componente'">
+            [alt]="kit.series + ' componente'" loading="lazy" decoding="async">
         </div>
 
         <div class="kit-body">

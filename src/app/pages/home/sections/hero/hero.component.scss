@@ -262,3 +262,9 @@ p {
   .hero-metrics { gap: 16px; }
 }
 
+
+@media (prefers-reduced-motion: reduce) {
+  .live-dot { animation: none; }
+  .scroll-line { animation: none; opacity: 0.4; }
+  .hero-noise { display: none; }
+}

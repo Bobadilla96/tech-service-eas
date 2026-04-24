@@ -208,3 +208,28 @@ body.light-theme .deco-number {
   color: rgba(15,23,42,0.035);
 }
 
+
+/* ── Performance: skip off-screen rendering ─────────────────────── */
+section + section {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 700px;
+}
+
+/* ── Accessibility + Performance: reduced motion ────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ── Low resolution: 360px and below ───────────────────────────── */
+@media (max-width: 360px) {
+  .container { padding: 0 16px; }
+  section { padding: 60px 0; }
+  h2.section-title { font-size: 21px; }
+  p.section-desc { font-size: 13.5px; }
+}
